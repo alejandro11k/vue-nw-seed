@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+const AutoUpdater = require( "nw-autoupdater" ),
+      updater = new AutoUpdater( require( "./package.json" ) ),
+      output =  document.querySelector( "#output" );
+
 Vue.config.productionTip = false
 
 // for auto update
